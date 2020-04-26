@@ -4,31 +4,149 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Subhalingam D is a sophomore at IIT Delhi and this is his personal website">
-    <meta name="keywords" content="subhalingamd, subhalingam, subhu2008, subhu">
-    <meta name="author" content="Subhalingam D">
-    <meta name="theme-color" content="#fafafa">
-    <meta name="google-site-verification" content="mQBwSJChbaQDpmReGndwk2AHedJ9gcUu5bWEjTY-5uE" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Subhalingam D</title>
+
+    <style>
+    
+        #ld{
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        #ld #ld-content {
+            padding-left: 15px;
+            position: absolute;
+            z-index: 1002;
+            top: 50%;
+            /*left: 50%;
+            transform: translate(-50%, -50%);*/
+            transform: translateY(-50%);
+            text-align: left
+        }
+        #ld-content h1,#ld-content h2 {
+            margin: 0
+        }
+        #ld-content h1 {
+            padding-bottom: 10px;
+            color: #fff;
+            font-weight: 900;
+            font-size: 5em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 0.9em
+        }
+        #ld-content h2 {
+            padding-bottom: 25px;
+            color: #a0cfee;
+            font-weight: 500;
+            font-size: 2.25em;
+            margin-bottom: 15px
+        }
+        #ld-overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 1001;
+            animation: ld-bg 1.75s linear 0 infinite;
+        }
+        
+       
+        .lds-ripple {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 80px;
+        }
+        .lds-ripple div {
+          position: absolute;
+          border: 4px solid #fff;
+          opacity: 1;
+          border-radius: 50%;
+          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        .lds-ripple div:nth-child(2) {
+          animation-delay: -0.5s;
+        }
+        @keyframes lds-ripple {
+          0% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+          }
+          100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+          }
+        }
+        @keyframes ld-bg {
+          0% {
+            background-color: rgba(0,0,0,0.75);
+          }
+          50% {
+            background-color: rgba(0,0,0,1);
+          }
+          100% {
+            background-color: rgba(0,0,0,0.75);
+          }
+        }
+
+        @media only screen and (max-width: 992px) {
+            #ld-content{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #ld-content h1, #ld-content h2{
+                display: none;
+            }
+        }
+
+    </style>
+
+    <noscript>
+        <style>
+            #ld{
+                display: none;
+            }
+        </style>
+    </noscript>
+
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <noscript>
-      <style>
-        .no-js header, .no-js #mobile-menu-open {
-            background-color: #fafafa;
-        }
-      </style>
-    </noscript>
-
 </head>
 
 <body>
+    <div class="loader" id="ld">
+            <div id="ld-content">
+                <h1>Subhalingam D</h1>
+                <h2>Sophomore, IIT Delhi</h2>
+                <div class="lds-ripple"><div></div><div></div></div><br>
+            </div>
+            <div id="ld-overlay"></div>
+    </div>
+
+
     <div id="mobile-menu-open">
         <div style="float:left">Subhalingam D</div>
         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -252,24 +370,7 @@
             <div class="row">
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Web Designing & Development for SAC, IIT Delhi</h3>
-                        <p>
-                            Design and develop a new website for Student Affairs Council (SAC), IIT Delhi.
-                        </p>
-                        <a onclick="void(0)">In Progress</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -285,7 +386,7 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -301,7 +402,7 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -321,7 +422,7 @@
 
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -336,7 +437,7 @@
                 <!-- End .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -351,7 +452,7 @@
                 <!-- End .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -366,7 +467,7 @@
                 <!-- End .project -->
                 <div class="project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
@@ -394,21 +495,19 @@
         <ul>
             <li>Java</li>
             <li>Python</li>
-            <li>Keras</li>
-            <li>Deep Learning</li>
-            <li>NumPy</li>
+            <li>C++</li>
+            <li>C</li>
             <li>Matlab</li>
             <li>PHP</li>
             <li>mySQL</li>
             <li>CSS</li>
             <li>jQuery</li>
             <li>HTML</li>
-            <li>C++</li>
-            <li>C</li>
             <li>Verilog</li>
             <li>Autodesk Inventor</li>
             <li>SML</li>
             <li>LaTeX</li>
+            <li>Data Structures</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -442,7 +541,7 @@
                             <a href="https://github.com/SubhalingamD" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         </li>
                         <!--<li>
-                            <a href="https://stackoverflow.com/subhu2008" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
                         </li>-->
                         <li>
                             <a href="https://linkedin.com/in/SubhalingamD" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -460,7 +559,7 @@
                             <a href="https://www.instagram.com/subhu2008" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                         <!--<li>
-                            <a href="https://twitter.com/subhu208" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>-->
                         <li>
                             <a href="mailto:subhalingam.d@gmail.com" target="_blank"><i class="fa fa-at" aria-hidden="true"></i></a>
@@ -485,6 +584,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+
+    <script>
+        // Wait for window load
+        document.onreadystatechange = function () {
+            var state = document.readyState
+            if (state == 'complete') {
+                document.getElementById('interactive');
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 0);
+                $('#ld').fadeOut();
+            }
+        }
+    </script>
+
 </body>
 
 </html>

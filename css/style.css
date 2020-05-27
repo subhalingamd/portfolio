@@ -20,7 +20,6 @@ body.active {
     background: var(--highlight-bg-color);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #dcd9d9
 }
 .no-js #education-timeline>div h3, .no-js #experience-timeline>div h3 {
     font-size: 1.5em;

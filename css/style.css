@@ -360,7 +360,10 @@ footer {
 }
 #about p {
     color: var(--text);
+    background: var(--highlight-bg-color);
     text-align: justify;
+    padding: 20px;
+    border-radius: 8px;
     margin: 0
 }
 
@@ -404,6 +407,7 @@ footer {
     background: var(--highlight-bg-color);
     padding: 15px;
     border-radius: 3px;
+    border-radius: 0 8px 8px;
     text-align: left
 }
 .vtimeline-content h3 {
@@ -469,6 +473,7 @@ footer {
     margin: 0 auto 30px auto;
     padding: 15px;
     background: var(--highlight-bg-color);
+    border-radius: 8px;
     text-align: left
 }
 .por-block h3 {
@@ -566,6 +571,7 @@ footer {
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
+    border-radius: 8px;
     color: var(--text);
     background: var(--highlight-bg-color);
     list-style: none;

@@ -395,13 +395,13 @@ footer {
     width: 3px;
     height: 40px;
     background: var(--highlight-bg-color);
-    background: linear-gradient(to bottom, #181818, #242424);
+    background: linear-gradient(to bottom, #212121, #282828);
     top: 100%;
     left: 303px
 }
 .vtimeline-content {
     margin-left: 350px;
-    background: #222;
+    background: var(--highlight-bg-color);
     padding: 15px;
     border-radius: 3px;
     text-align: left
@@ -567,7 +567,7 @@ footer {
     margin: 7px;
     padding: 5px 10px;
     color: var(--text);
-    background: #282828;
+    background: var(--highlight-bg-color);
     list-style: none;
     cursor: default;
     font-size: 1.2em
@@ -594,7 +594,7 @@ footer {
     border-radius: 8px;
     border: none;
     margin-bottom: 10px;
-    background: #202020;
+    background: var(--highlight-bg-color);
     color: var(--text);
     transition: .5s ease all
 }
@@ -634,7 +634,7 @@ footer {
 }
 #contact-form button:hover {
     background: #16527a;
-    border: none;
+    border-color: #16527a;
 }
 
 @media only screen and (max-width: 750px) {

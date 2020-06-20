@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
 
 
     <style>
-    
+        /* For loader */
         #ld{
             position: fixed;
             top: 0;
@@ -127,21 +127,16 @@
     <meta name="author" content="Subhalingam D">
     <meta name="theme-color" content="#fafafa">
     <meta name="google-site-verification" content="mQBwSJChbaQDpmReGndwk2AHedJ9gcUu5bWEjTY-5uE" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewactivityt" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 
     <noscript>
-      <style>
-        /* Remove loader*/
-        #ld{
-            display: none;
-        }
-      </style>
+        <link href="./css/style-noscript.css" rel="stylesheet">
     </noscript>
 
 </head>
@@ -152,7 +147,7 @@
         <div id="ld-content">
             <h1>Subhalingam D</h1>
             <h2>Sophomore, IIT Delhi</h2>
-            <div class="lds-ripple"><div></div><div></div></div><br>
+            <div class="lds-ripple"><div></div><div></div></div>
         </div>
         <div id="ld-overlay"></div>
     </div>
@@ -165,15 +160,16 @@
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       <ul class="menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <!---<li><a href="#experience">Experience</a></li>-->
         <li><a href="#education">Education</a></li>
-        <li><a href="#por">Activities</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
 
-    <div id="lead">
+    <section id="lead">
         <div id="lead-content">
             <h1>Subhalingam D</h1>
             <h2>Sophomore, IIT Delhi</h2>
@@ -185,14 +181,13 @@
 
         <div id="lead-down">
             <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </span>
         </div>
         <!-- End #lead-down -->
-    </div>
+    </section>
     <!-- End #lead -->
 
-    <div id="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -205,10 +200,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End #about -->
 
-    <div id="education" class="background-alt">
+    <section id="education" class="background-alt">
         <h2 class="heading">Education</h2>
         <div id="education-timeline">
             <div data-date="Present">
@@ -235,11 +230,11 @@
                 </p>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End #education -->
 
     <!--
-     <div id="experience" class="background-alt">
+     <section id="experience" class="background-alt">
         <h2 class="heading">Expereince</h2>
         <div id="experience-timeline">
             <div data-date="Present">
@@ -266,18 +261,15 @@
                 </p>
             </div>
         </div>
-    </div>-->
+    </section>-->
     <!-- End #education -->
 
-    <div id="por">
+    <section id="activities">
         <h2 class="heading">Activities</h2>
-        <div class="por-block">
+        <div class="activity-block">
             <h3>Web Development Executive</h3>
-            <span class="por-date">September 2019 - Present</span>
+            <span class="activity-date">September 2019 - Present</span>
             <h4>Student Incubation Cell, IIT Delhi</h4>
-            <!--<p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>-->
             <ul>
                 <li>
                     Conceptualise, design and develop the website and test it
@@ -287,21 +279,21 @@
                 </li>
             </ul>
         </div>
-        <!-- End .por-block -->
+        <!-- End .activity-block -->
 
-        <div class="por-block">
+        <div class="activity-block">
             <h3>Language Mentor</h3>
-            <span class="por-date">August 2019 - Present</span>
+            <span class="activity-date">August 2019 - Present</span>
             <h4>Board for Student Welfare (BSW), IIT Delhi</h4>
             <p>
                 Assist freshmen in overcoming English Language barrier by conducting interactive sessions throughout the semester           
             </p>
         </div>
-        <!-- End .por-block -->
+        <!-- End .activity-block -->
 
-        <div class="por-block">
+        <div class="activity-block">
             <h3>Executive</h3>
-            <span class="por-date">July 2019 - Present</span>
+            <span class="activity-date">July 2019 - Present</span>
             <h4>Mathematics Society, IIT Delhi</h4>
             <ul>
                 <li>
@@ -315,11 +307,11 @@
                 </li>
             </ul>
         </div>
-        <!-- End .por-block -->
+        <!-- End .activity-block -->
 
-        <div class="por-block">
+        <div class="activity-block">
             <h3>Volunteer</h3>
-            <!-- <span class="por-date">July 2019 - Present</span> -->
+            <!-- <span class="activity-date">July 2019 - Present</span> -->
             <h4>National Service Scheme (NSS), IIT Delhi</h4>
             <ul>
                 <li>
@@ -333,29 +325,29 @@
                 </li>
             </ul>
         </div>
-        <!-- End .por-block -->
+        <!-- End .activity-block -->
 
-        <div class="por-block">
+        <div class="activity-block">
             <h3>Technical Executive</h3>
-            <span class="por-date">August 2019 - October 2019</span>
+            <span class="activity-date">August 2019 - October 2019</span>
             <h4>Rendezvous, IIT Delhi</h4>
             <p>
                 Part of the Web Front-end Development team and contributed towards designing of the same
             </p>
         </div>
-        <!-- End .por-block -->
+        <!-- End .activity-block -->
 
-    </div>
-    <!-- End #por -->
+    </section>
+    <!-- End #activity -->
 
-    <div id="projects" class="background-alt">
+    <section id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
                 <div class="project no-image">
                     <!-- IF IMAGE
                     <div class="project-image">
-                        <img src="images/project.png" />
+                        <img src="img/project.png" />
                     </div>
                     -->
                     <!-- End .project-image -->
@@ -388,7 +380,7 @@
                     <div class="project-info">
                         <h3>Jobs Scheduler & Manager [Java]</h3>
                         <p>
-                            Used Red-Black Trees, Tries, Max-Heap and some other data structures and implemented a Job Scheduler to schedule and execute a Job of a Project by a User based on the priority (or wait-time) and resources available and reporting various other details like users who consume lots of resources, jobs belonging to a project/user and Job status efficiently.
+                            Used Red-Black Trees, Tries, Max-Heap and some other data structures and implemented a Job Scheduler to schedule and execute a Job of a Project by a User based on the priority (or wait-time) and resources available and reactivityting various other details like users who consume lots of resources, jobs belonging to a project/user and Job status efficiently.
                         </p>
                         <a href="https://github.com/subhalingamd/jobs-scheduler">View Project</a>
                     </div>
@@ -427,7 +419,7 @@
                     <div class="project-info">
                         <h3>Symbolic Differentiation [Python]</h3>
                         <p>
-                            By parsing the given fully parenthesised infix expression, constructed a Binary Tree and thereby computed its derivative by traversal. The parser supports a variety of real functions like algebraic, trigonometric, exponential, composite functions.
+                            By parsing the given fully parenthesised infix expression, constructed a Binary Tree and thereby computed its derivative by traversal. The parser supactivityts a variety of real functions like algebraic, trigonometric, exponential, composite functions.
                         </p>
                         <a href="#">View Project</a>
                     </div>
@@ -463,10 +455,10 @@
 
             </div>
         </div>
-    </div>
+    </section>
     <!-- End #projects -->
 
-    <div id="skills">
+    <section id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
             <li>Java</li>
@@ -487,11 +479,11 @@
             <li>SML</li>
             <li>LaTeX</li>
         </ul>
-    </div>
+    </section>
     <!-- End #skills -->
 
     
-    <div id="contact">
+    <section id="contact">
         <div class="row">
             <div class="col-md-5">
                 <h2 class="heading">Get in Touch</h2>
@@ -505,7 +497,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- End #contact -->
 
@@ -535,9 +527,9 @@
                         <li>
                             <a href="https://quora.com/Subhalingam-D" target="_blank"><i class="fa fa-quora" aria-hidden="true"></i></a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="https://twitter.com/subhalingamd" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="https://www.facebook.com/SubhalingamD" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
@@ -567,7 +559,7 @@
     <!-- End footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         // Wait for window load

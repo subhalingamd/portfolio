@@ -1,61 +1,79 @@
-/*!
-    Title: Dev Portfolio Template
-    Author: Ryan Fitzgerald (modified by Subhalingam D)
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
-
 (function($) {
-
-    // Remove no-js class
-    $('html').removeClass('no-js');
 
 
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
-
-        // Treat as normal link if no-scroll class
-        if ($(this).hasClass('no-scroll')) return;
 
         // Hide the menu once clicked if mobile
         if ($('header .menu-btn').is(':checked')) {
             $('header .menu-btn').attr('checked',false);
         }
 
-        e.preventDefault();
-        var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top - $('header').height();
+        // Treat as normal link if no-scroll class
+        if ($(this).hasClass('no-scroll')) return;
 
-        /* $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 5); */
+        e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
+            scrollTop: $($(this).attr('href')).offset().top - $('header').height()
         }, 750);
 
         
     });
 
-    // Scroll to top
-    $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+    // Header modifications while scrolling and opening/closing
+    function style_header() {
+        if ($(document).scrollTop() > $('#lead-content>h1').offset().top ) {
+          $('header').css({"background-color":"#000","border-bottom":"2.5px solid #3498db"});
+          $('.logo').css("visibility","visible");
+        } 
+        else {
+          $('header').css({"background-color":"transparent","border":"none"});
+          $('header .menu').css({"background-color":"transparent","border":"none"});
+          $('.logo').css("visibility","hidden");
+          
+        }
+    }
+
+    function force_style_header(){
+        $('header').css({"background-color":"#000","border-bottom":"2.5px solid #3498db"});
+        $('header .menu').css('background-color','#121212');
+        $('.logo').css("visibility","visible");
+    }
+
+    $(document).scroll(function() {
+        if (!$('header .menu-btn').is(':checked') || $('header .menu-icon').css('display')=='none'){
+            style_header();
+        }
+      
+    })
+
+    $('header .menu-btn').click(function(){
+        if ($('header .menu-btn').is(':checked'))
+            force_style_header();
+        else
+            style_header();
     });
+
+    $(window).resize(function(){
+        if (!$('header .menu-btn').is(':checked') || $('header .menu-icon').css('display')=='none' )
+            style_header();
+        else
+            force_style_header();
+    })
+
+
 
     // Scroll to first element
-    $('#lead-down span').click(function() {
+    $('#lead-down').click(function() {
         var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
+            scrollTop: scrollDistance - $('header').height()
         }, 500);
     });
 
 
-    // Create timeline
+    // Create timeline (Author: Ryan Fitzgerald)
     $('#education-timeline').each(function() {
 
         $this = $(this); // Store reference to this
@@ -119,50 +137,7 @@
 
 
 
-    function style_header() {
-        if ($(document).scrollTop() > $('#lead-content>h1').offset().top ) {
-          $('header').css({"background-color":"#000","border-bottom":"2.5px solid #3498db"});
-          $('.logo').css("visibility","visible");
-        } 
-        else {
-          $('header').css({"background-color":"transparent","border":"none"});
-          $('header .menu').css({"background-color":"transparent","border":"none"});
-          $('.logo').css("visibility","hidden");
-          
-        }
-    }
-
-    function force_style_header(){
-        $('header').css({"background-color":"#000","border-bottom":"2.5px solid #3498db"});
-        $('header .menu').css('background-color','#121212');
-        $('.logo').css("visibility","visible");
-    }
-
-    $(document).scroll(function() {
-        if (!$('header .menu-btn').is(':checked') || $('header .menu-icon').css('display')=='none'){
-            style_header();
-        }
-      
-    })
-
-    $('header .menu-btn').click(function(){
-        if ($('header .menu-btn').is(':checked'))
-            force_style_header();
-        else
-            style_header();
-    });
-
-    $(window).resize(function(){
-        if (!$('header .menu-btn').is(':checked') || $('header .menu-icon').css('display')=='none' )
-            style_header();
-        else
-            force_style_header();
-    })
-    
-
-
     // AJAX send
-
     window.addEventListener("DOMContentLoaded", function() {
 
       // get the form elements defined in your form HTML above   

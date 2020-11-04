@@ -15,6 +15,14 @@ body {
     font-size: 1rem;
 }
 
+@media (max-width: 50rem){
+  body{
+    font-size: 0.825rem;
+  }
+  #lead{
+    font-size: 1rem;
+  }
+}
 
 header {
   background-color: transparent;
@@ -187,7 +195,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 /* ============= 
 Body & Footer 
 
-    Original Author: Ryan Fitzgerald (excl. lead-down)
+    Original Author: Ryan Fitzgerald
     Modified by: Subhalingam D
 
 ================= */
